@@ -37,19 +37,6 @@ def log_request():
         "data": body                     # Raw body data
     }
 
-    # Log details to the console
-    print("=== Incoming Request ===")
-    print(f"Originating IP: {originating_ip}")
-    print("Entire Request Object as Dictionary:")
-    print(json.dumps(request_dict, indent=2))  # Pretty-print the dictionary
-    print("========================")
-
-    print("=== Entire Request Object ===")
-    print(f"Originating IP: {originating_ip}")
-    print("Entire Request Object as Dictionary:")
-    print(json.dumps(request, indent=2))  # Pretty-print the dictionary
-    print("========================")
-
 
     return {"message": "Request received. Check server logs for details."}, 200
 
