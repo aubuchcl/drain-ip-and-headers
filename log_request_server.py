@@ -1,4 +1,5 @@
 from flask import Flask, request
+import json 
 
 app = Flask(__name__)
 
@@ -43,7 +44,7 @@ def log_request():
     print(json.dumps(request_dict, indent=2))  # Pretty-print the dictionary
     print("========================")
 
-    
+
     return {"message": "Request received. Check server logs for details."}, 200
 
 if __name__ == "__main__":
